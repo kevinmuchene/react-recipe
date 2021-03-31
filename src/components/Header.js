@@ -8,7 +8,7 @@ const Header = () => {
       <p>
         <b>
           {" "}
-          <i>This site uses Edamam's Recipe Search API to intergrate recipes</i>
+          <i>This site uses Edamam's Recipe Search API</i>
         </b>
       </p>
     </div>
