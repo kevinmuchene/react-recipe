@@ -32,8 +32,9 @@ const Body = () => {
   };
   return (
     <div>
-      <form onSubmit={getSearch}>
+      <form className="form" onSubmit={getSearch}>
         <input
+          className="input"
           value={search}
           type="text"
           placeholder="Search..."
