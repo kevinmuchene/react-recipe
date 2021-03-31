@@ -1,12 +1,13 @@
 import "./App.css";
 import Body from "./components/Body";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, CardColumns, CardDeck } from "react-bootstrap";
+import Header from "./components/Header";
 
 function App() {
   return (
     <div className="App">
       {" "}
+      <Header />
       <Body />
     </div>
   );
