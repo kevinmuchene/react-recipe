@@ -59,7 +59,7 @@ const Body = () => {
       ) : (
         <div id="loading">
           <div>
-            <p id="load_status">Search for any food recipe to display</p>
+            <p id="load_status">Search for any food recipe</p>
           </div>
           <Spinner animation="grow" variant="info"></Spinner>
           <Spinner animation="grow" variant="warning"></Spinner>

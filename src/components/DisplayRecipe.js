@@ -14,7 +14,7 @@ const DisplayRecipe = ({ title, image, ingredientLines, calories }) => {
               <Card>
                 <Card.Header>
                   <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                    Check recipe
+                    <i>Recipe</i>
                   </Accordion.Toggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="0">
