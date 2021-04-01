@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Spinner } from "react-bootstrap";
 import DisplayRecipe from "./DisplayRecipe";
 
 const APP_ID = "742d5385";
@@ -30,6 +31,7 @@ const Body = () => {
     setQuery(search);
     setSearch("");
   };
+
   return (
     <div>
       <form className="form" onSubmit={getSearch}>
@@ -42,16 +44,28 @@ const Body = () => {
         ></input>
         <button>Search</button>
       </form>
-      <div className="cards">
-        {recipes.map((recipe) => (
-          <DisplayRecipe
-            title={recipe.recipe.label}
-            image={recipe.recipe.image}
-            ingredientLines={recipe.recipe.ingredientLines}
-            calories={recipe.recipe.calories}
-          />
-        ))}
-      </div>
+
+      {query !== "" ? (
+        <div className="cards">
+          {recipes.map((recipe) => (
+            <DisplayRecipe
+              title={recipe.recipe.label}
+              image={recipe.recipe.image}
+              ingredientLines={recipe.recipe.ingredientLines}
+              calories={recipe.recipe.calories}
+            />
+          ))}
+        </div>
+      ) : (
+        <div id="loading">
+          <div>
+            <p id="load_status">Search for any food recipe to display</p>
+          </div>
+          <Spinner animation="grow" variant="info"></Spinner>
+          <Spinner animation="grow" variant="warning"></Spinner>
+          <Spinner animation="grow" variant="success"></Spinner>
+        </div>
+      )}
     </div>
   );
 }; //end body component
