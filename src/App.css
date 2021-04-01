@@ -11,14 +11,36 @@ This is for DisplayRecipe.j
   grid-template-columns: repeat(4, 1fr);
   column-gap: 0.8em;
   row-gap: 0.8em;
-  border-style: groove;
-  margin: 1em;
-  border-radius: 10px;
+  margin-left: 1.8em;
   padding: 0.2em;
+}
+@media (max-width: 1500px) {
+  .cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1000px) {
+  .cards {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 741px) {
+  .cards {
+    display: grid;
+
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .card-class {
   width: 21rem;
+  border-style: groove;
+  border-radius: 2em;
 }
 .card-class h6 {
   color: rgb(13, 109, 109);
@@ -35,13 +57,9 @@ This is for DisplayRecipe.j
 /*
 This is for Header.js
 */
-
 .header {
-  border-style: groove;
   margin: 1em;
-  border-radius: 10px;
 }
-
 .header p {
   margin: 1em;
   color: rgb(5, 102, 119);
@@ -55,7 +73,6 @@ This is for Body.js
 */
 
 .form {
-  border: 2px solid rgb(238, 238, 238);
   margin: 1em;
   box-sizing: border-box;
   padding: 1em;
@@ -77,4 +94,9 @@ This is for Body.js
   color: #fff;
   border-radius: 10px;
   width: 13%;
+}
+
+#load_status {
+  font-size: 1.5em;
+  color: rgb(5, 102, 119);
 }
